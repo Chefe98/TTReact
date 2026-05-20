@@ -1,0 +1,33 @@
+.nav-list {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  list-style: none;
+}
+
+.nav-list li {
+
+  color: var(--text-muted);
+
+  font-weight: 600;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.nav-list li:hover {
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+.nav-list a.active {
+
+  color: var(--primary);
+}

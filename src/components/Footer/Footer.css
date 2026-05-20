@@ -1,0 +1,184 @@
+.footer {
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.01)
+    ),
+    var(--bg-secondary);
+
+  border-top:
+    1px solid rgba(255,255,255,0.06);
+
+  padding: 3rem 2rem 1.5rem;
+
+  margin-top: 5rem;
+}
+
+/* TOP */
+
+.footer-top {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 3rem;
+
+  padding-bottom: 2rem;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+/* BRAND */
+
+.footer-brand {
+
+  max-width: 320px;
+}
+
+.logo-container-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-bottom: 1rem;
+}
+
+.logo-container-footer img {
+
+  width: 42px;
+  height: 42px;
+
+  filter:
+    drop-shadow(0 0 12px rgba(214,168,95,0.25));
+}
+
+.logo-container-footer span {
+
+  font-size: 1.3rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: var(--primary);
+
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+
+  color: var(--text-muted);
+
+  line-height: 1.7;
+
+  font-size: 0.95rem;
+}
+
+/* SOCIAL */
+
+.footer-social h4 {
+
+  margin-bottom: 1rem;
+
+  font-size: 1rem;
+
+  color: var(--text);
+}
+
+.social-icons {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  list-style: none;
+}
+
+.social-icons li {
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.social-icons li:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.05);
+
+  opacity: 0.9;
+}
+
+.social-icons img {
+
+  width: 34px;
+
+  height: 34px;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding-top: 1.5rem;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.footer-bottom p {
+
+  font-size: 0.9rem;
+
+  color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .footer-top {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-brand {
+
+    max-width: 100%;
+  }
+
+  .social-icons {
+
+    justify-content: center;
+  }
+
+  .footer-bottom {
+
+    text-align: center;
+  }
+}

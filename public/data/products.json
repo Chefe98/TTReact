@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Goku Super Saiyan",
+    "description": "Figura de acción Dragon Ball Z  25cm, edición coleccionista",
+    "price": 32000,
+    "image": "/img/goku-ssj.jpg",
+    "category": "dragon-ball-z"
+  },
+  {
+    "id": 2,
+    "name": "Vegeta Prince of Saiyans",
+    "description": "Figura articulada Dragon Ball Z  22cm",
+    "price": 29500,
+    "image": "/img/vegeta.jpg",
+    "category": "dragon-ball-z"
+  },
+  {
+    "id": 3,
+    "name": "Darth Vader",
+    "description": "Figura Star Wars  Línea Black Series",
+    "price": 41000,
+    "image": "/img/darth-vader.jpg",
+    "category": "star-wars"
+  },
+  {
+    "id": 4,
+    "name": "Luke Skywalker",
+    "description": "Figura Star Wars  Episodio IV",
+    "price": 38000,
+    "image": "/img/luke.jpg",
+    "category": "star-wars"
+  },
+  {
+    "id": 5,
+    "name": "Leon S. Kennedy",
+    "description": "Figura Resident Evil 4  Edición especial",
+    "price": 45000,
+    "image": "/img/leon.jpg",
+    "category": "resident-evil"
+  },
+  {
+    "id": 6,
+    "name": "Xenomorph",
+    "description": "Figura Alien  30cm, ultra detallada",
+    "price": 52000,
+    "image": "/img/alien.jpg",
+    "category": "alien"
+  },
+  {
+    "id": 7,
+    "name": "Baki Hanma",
+    "description": "Figura Baki  Edición anime",
+    "price": 34000,
+    "image": "/img/baki.jpg",
+    "category": "baki"
+  },
+  {
+    "id": 8,
+    "name": "Demogorgon",
+    "description": "Figura Stranger Things Demogorgon 30cm",
+    "price": 40000,
+    "image": "/img/demogorgon.jpg",
+    "category": "stranger-things"
+  }
+]
