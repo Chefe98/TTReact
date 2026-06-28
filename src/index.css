@@ -137,6 +137,13 @@ h1 {
   gap: 2rem;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* BOTONES */
 
 .btn {
@@ -196,6 +203,24 @@ a:focus-visible {
   outline: 2px solid var(--accent);
 
   outline-offset: 3px;
+}
+
+.bg-success {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bg-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { getProductsById } from "../../services/productsService";
 
 
 export const ItemDetailContainer = () => {
@@ -12,17 +13,8 @@ export const ItemDetailContainer = () => {
 //si no usamos null, se puede usar un objeto vacio y si tiene clave se usa como mensaje de error, podemos poner en vez de tipo null vacio podemos usar lo del object.kiss itemdetail length entonces si no tiene un largo es porque esta vacio.
 
     useEffect(() => {
-        fetch("/data/products.json")
-        .then(res => res.json())
-        .then((data) => {
-            const item = data.find(element => String(element.id) === id);
-            if (item) {
-                setItemDetail(item)
-                return;
-            }
-
-            throw new Error("Elemento no encontrado");
-        })
+        getProductsById(id)
+        .then((data) => setItemDetail(data))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }, [id]);

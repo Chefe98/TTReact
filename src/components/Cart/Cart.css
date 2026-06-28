@@ -1,0 +1,17 @@
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+.empty-cart {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
