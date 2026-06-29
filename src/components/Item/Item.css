@@ -67,9 +67,7 @@
 
   aspect-ratio: 1 / 1;
 
-  /*object-fit: contain;*/
-
-  object-fit: cover;
+  object-fit: contain;
 
   border-radius: 12px;
 

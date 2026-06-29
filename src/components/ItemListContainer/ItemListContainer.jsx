@@ -22,6 +22,16 @@ export const ItemListContainer = () => {
     },[category]);
 
     if (loading) return <p>Cargando...</p>;
+
+    if (category && products.length === 0) {
+        return (
+            <section className="category-empty">
+                <h2>{category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}</h2>
+                <p>No hay productos en esta categoría.</p>
+            </section>
+        );
+    }
+
     return (
         <section>
             <ItemList products={products} />

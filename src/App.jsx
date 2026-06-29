@@ -10,6 +10,7 @@ import { AdminLayout } from "./layouts/AdminLayout";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
 import { Login } from "./components/Login/Login";
+import ProductList from './components/adminComponents/ProductList';
 
 function App() {
   
@@ -41,7 +42,8 @@ function App() {
           {/* Si el admin esta logueado, redirige a la ruta /admin/dashboard */}
           <Route index element={<Navigate to={"dashboard"} />} />
           <Route path="dashboard" element={<Dashboard />} />
-
+          <Route path="products" element={<ProductList/>}/>
+          <Route path="products/edit/:id" element={<ProductFormContainer/>}/>
           <Route path="products/new" element={<ProductFormContainer />} />
           <Route path="products/success/:id" element={<ProductSuccess />} />
           </Route>

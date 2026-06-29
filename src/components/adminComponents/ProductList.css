@@ -1,0 +1,126 @@
+.admin-product-list {
+  padding: 1.5rem;
+  background: var(--card);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-product-list h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+}
+
+.admin-list-actions {
+  margin-bottom: 1.25rem;
+}
+
+.btn-add {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, var(--primary), #b98a44);
+  color: #111;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.btn-add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(214, 168, 95, 0.25);
+}
+
+/* ---- TABLA ---- */
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.admin-table th {
+  background: var(--bg-elevated);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.admin-table td {
+  color: var(--text-muted);
+}
+
+.admin-table tbody tr:hover {
+  background: var(--card-hover);
+}
+
+.admin-thumbnail {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--bg-elevated);
+}
+
+/* ---- BOTONES DE ACCIÓN ---- */
+
+.btn-edit,
+.btn-delete {
+  padding: 0.4rem 0.9rem;
+  margin-right: 0.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.btn-edit {
+  background: var(--primary);
+  color: #111;
+  text-decoration: none;
+}
+
+.btn-edit:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.admin-list-loading,
+.admin-list-error {
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.admin-list-error {
+  color: var(--danger);
+}

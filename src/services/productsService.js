@@ -1,6 +1,8 @@
 import {
     collection,
     addDoc,
+    updateDoc,
+    deleteDoc,
     getDocs,
     getDoc,
     doc,
@@ -12,10 +14,14 @@ import { db } from "../firebase/config";
 
 const productsRef = collection(db,"products");
 
+const isValidProduct = (doc) => Boolean(doc.data().name?.trim());
+
 export const getProducts = async() => {
     try{
         const snapshot = await getDocs(productsRef)
-        const productsFormat = snapshot.docs.map((doc)=>{
+        const productsFormat = snapshot.docs
+          .filter(isValidProduct)
+          .map((doc)=>{
             return {id: doc.id, ...doc.data()}
         });
         return productsFormat;
@@ -51,7 +57,9 @@ export const getByCategory = async (category) => {
             queryRef = productsRef;
         }
         const snapshot = await getDocs(queryRef);
-        const productsFormat = snapshot.docs.map((doc)=>{
+        const productsFormat = snapshot.docs
+          .filter(isValidProduct)
+          .map((doc)=>{
             return { id: doc.id, ...doc.data()};
         });
         return productsFormat;
@@ -59,6 +67,21 @@ export const getByCategory = async (category) => {
         console.error("Error al filtrar por productos:",error);
         return [];
     }
+};
+
+export const getCategories = async () => {
+  try {
+    const snapshot = await getDocs(productsRef);
+    const categories = [...new Set(
+      snapshot.docs
+        .map(doc => doc.data().category)
+        .filter(Boolean)
+    )];
+    return categories.sort();
+  } catch (error) {
+    console.error("Error al obtener categorías:", error);
+    return [];
+  }
 };
 
 export const createProduct = async (productData) => {
@@ -69,6 +92,26 @@ export const createProduct = async (productData) => {
     return docRef.id; 
   } catch (error) {
     console.error("Error al crear producto:", error);
+    throw error;
+  }
+};
+
+export const updateProduct = async (id, productData) => {
+  try {
+    const productRef = doc(db, 'products', id);
+    await updateDoc(productRef, productData);
+  } catch (error) {
+    console.error("Error al actualizar producto:", error);
+    throw error;
+  }
+};
+
+export const deleteProduct = async (id) => {
+  try {
+    const productRef = doc(db, 'products', id);
+    await deleteDoc(productRef);
+  } catch (error) {
+    console.error("Error al eliminar producto:", error);
     throw error;
   }
 };
